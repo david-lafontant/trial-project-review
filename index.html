@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css"
+
+<title>Why DOcumentin in Python</title>
+<style>
+ @media (max-width: 600px) {
+    body {
+        background-color: #f2f0eb;
+    }
+}
+</style>
+</head>
+<body>
+<main id="main-doc">
+ <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<h1>How and WHy Documenting in Python</h1>
+
+<div class="row">
+  <div class="col-lg-3 col-md-3">
+<nav id="navbar">
+				<header>
+				  Python Documentation
+				</header>
+
+				<ul>
+				  <li class="menu_item">
+					<a href="#introduction" class="nav-link">Introduction</a>
+				  </li>
+
+				  <li class="menu_item">
+					<a href="#why_documenting" class="nav-link">Why Documenting</a>
+				  </li>
+
+				  <li class="menu_item">
+					<a href="#commenting_vs_documenting" class="nav-link">Commenting Vs Documenting</a>
+				  </li>
+
+				  <li class="menu_item">
+					<a href="#commenting" class="nav-link">Commenting</a>
+				  </li>
+
+				  <li class="menu_item">
+					<a href="#documenting" class="nav-link">Documenting</a>
+				  </li>
+				</ul>
+			  </nav>
+
+  </div>
+  <div class="col-lg-9 col-md-9">
+
+  <!-- Section 1-->
+			  <section class="main-section" id="introduction">
+				<header>
+				  Introduction
+				</header>
+				<p>
+				  Welcome to your complete guide to documenting Python code. Whether you’re documenting a small script or a large project, whether you’re a beginner or a seasoned Pythonista, this guide will cover everything you need to know.
+				</p>
+			  </section>
+			  <!-- End of Section 1-->
+
+
+  </div>
+
+
+  <div class="col-lg-9 col-md-9">
+  <!-- section 2-->
+
+   <section class="main-section" id="why_documenting">
+				<header>
+				  Why Documenting
+				</header>
+<p>Hopefully, if you’re reading this tutorial, you already know the importance of documenting your code. But if not, then let me quote something Guido mentioned to me at a recent PyCon:
+</p>
+
+				<p>
+				  When you write code, you write it for two primary audiences: your users and your developers (including yourself). Both audiences are equally important. If you’re like me, you’ve probably opened up old codebases and wondered to yourself, “What in the world was I thinking?” If you’re having a problem reading your own code, imagine what your users or other developers are experiencing when they’re trying to use or contribute to your code.
+				</p>
+			  </section>
+			  <!-- end of section 2-->
+
+
+  </div>
+
+
+  <div class="col-lg-9 col-md-9">
+	<!-- section 3-->
+	<section class="main-section" id="commenting_vs_documenting">
+				<header>
+				  Commenting vs Documenting
+				</header>
+				<p>In general, commenting is describing your code to/for developers. The intended main audience is the maintainers and developers of the Python code. In conjunction with well-written code, comments help to guide the reader to better understand your code and its purpose and design:</p>
+
+				<p>Documenting code is describing its use and functionality to your users. While it may be helpful in the development process, the main intended audience is the users. The following section describes how and when to comment your code.</p>
+
+				<h3>Basics of Commenting Code</h3>
+				<p>Comments are created in Python using the pound sign (#) and should be brief statements no longer than a few sentences. Here’s a simple example:</p>
+
+				<p>Comments to your code should be kept brief and focused. Avoid using long comments when possible. Additionally, you should use the following four essential rules as suggested by Jeff Atwood:</p>
+
+				<code>
+				  def hello_world():<br>
+				  # A simple comment preceding a simple print statement<br>
+				  print("Hello World")
+				</code>
+
+				<ul>
+				  <li>
+					Keep comments as close to the code being described as possible. Comments that aren’t near their describing code are frustrating to the reader and easily missed when updates are made.
+
+				  </li>
+
+				  <li>
+					Don’t use complex formatting (such as tables or ASCII figures). Complex formatting leads to distracting content and can be difficult to maintain over time.
+
+				  </li>
+
+				  <li>
+					Don’t include redundant information. Assume the reader of the code has a basic understanding of programming principles and language syntax.
+
+				  </li>
+
+				  <li>
+					Design your code to comment itself. The easiest way to understand code is by reading it. When you design your code using clear, easy-to-understand concepts, the reader will be able to quickly conceptualize your intent.
+				  </li>
+
+				  <li>
+					Remember that comments are designed for the reader, including yourself, to help guide them in understanding the purpose and design of the software.
+
+				  </li>
+				</ul>
+
+
+
+
+
+			  </section>
+			  <!-- End of Section 3-->
+
+  </div>
+  <div class="col-lg-9 col-md-9">
+
+	<!-- Section 4-->
+			  <section class="main-section" id="commenting">
+				<header>
+				  Commenting
+				</header>
+
+				<p>
+				  Type hinting was added to Python 3.5 and is an additional form to help the readers of your code. In fact, it takes Jeff’s fourth suggestion from above to the next level. It allows the developer to design and explain portions of their code without commenting. Here’s a quick example:
+				</p>
+
+				<code>
+				  def hello_name(name: str) -> str:<br>
+				  return(f"Hello {name}")
+				</code>
+
+
+				<p>
+				  From examining the type hinting, you can immediately tell that the function expects the input name to be of a type str, or string. You can also tell that the expected output of the function will be of a type str, or string, as well. While type hinting helps reduce comments, take into consideration that doing so may also make extra work when you are creating or updating your project documentation.
+				</p>
+
+			  </section>
+			  <!-- End of Section 4 -->
+
+
+  </div>
+  <div class="col-lg-9 col-md-9">
+
+  <!-- Section 5-->
+			  <section class="main-section" id="documenting">
+				<header>
+				  Documenting
+				</header>
+				<p>
+
+				  Now that we’ve learned about commenting, let’s take a deep dive into documenting a Python code base. In this section, you’ll learn about docstrings and how to use them for documentation. This section is further divided into the following sub-sections:
+
+				</p>
+				<ul>
+
+				  <li>Docstrings Background: A background on how docstrings work internally within Python</li>
+				  <li>Docstring Types: The various docstring “types” (function, class, class method, module, package, and script)</li>
+				  <li>Docstring Formats: The different docstring “formats” (Google, NumPy/SciPy, reStructured Text, and Epytext)</li>
+
+				</ul>
+
+				<p>How is this output generated? Since everything in Python is an object, you can examine the directory of the object using the dir() command. Let’s do that and see what find:</p>
+				<code>
+				  >>> dir(str)<br>
+				  ['__add__', ..., '__doc__', ..., 'zfill'] # Truncated for readability
+				</code>
+
+
+				<p>Any other custom object can be manipulated:</p>
+				<code>
+				  def say_hello(name):<br>
+				  print(f"Hello {name}, is it me you're looking for?")<br>
+
+				  say_hello.__doc__ = "A simple function that says hello... Richie style"
+				</code>
+
+				<p>Python has one more feature that simplifies docstring creation. Instead of directly manipulating the __doc__ property, the strategic placement of the string literal directly below the object will automatically set the __doc__ value. Here’s what happens with the same example as above:</p>
+
+				<code>
+				  def say_hello(name):<br>
+				  """A simple function that says hello... Richie style"""<br>
+				  print(f"Hello {name}, is it me you're looking for?")
+				</code>
+
+
+				<code>
+				  >>> help(say_hello)
+				</code>
+
+			  </section>
+			  <!-- End of Section 1-->
+
+
+  </div>
+
+</div>
+</main>
+</body>
+</html>
